@@ -31,5 +31,12 @@ jobs:
         php artisan key:generate
         php artisan migrate
  
+    - name: Run PHPCS
+      run: vendor/bin/phpcs
+
+
+    - name: Run PHPMD
+      run: vendor/bin/phpmd app text .phpmd.xml
+
     - name: Run Testsuite
       run: vendor/bin/phpunit tests/
