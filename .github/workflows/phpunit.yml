@@ -10,7 +10,6 @@ jobs:
       mysql:
         image: mysql:5.7
         env:
-          MYSQL_USERNAME: sail
           MYSQL_ROOT_PASSWORD: password
           MYSQL_DATABASE: example_app
         ports:
