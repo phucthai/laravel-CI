@@ -14,10 +14,10 @@ jobs:
     - name: Install composer dependencies
       run: |
         composer install --no-scripts
-        
+
     - name: Prepare Laravel Application
       run: |
         cp .env.ci .env
  
     - name: Run PHPMD
-      run: vendor/bin/phpmd app text .phpmd.xml
+      run: vendor/bin/phpmd app text phpmd.xml
